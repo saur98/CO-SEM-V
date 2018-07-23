@@ -64,8 +64,6 @@ int main()
     g.edge(2, 6);*/
     cout<<"enter source node"<<endl;
     cin>>source;
-    cout<<source<<endl;
-    g.bfs(source,n);
     while(c!=0)
     {
         int a,b;
@@ -75,6 +73,8 @@ int main()
         cout<<"STOP ?(press 0 to stop/press 1 to continue)"<<endl;
         cin>>c;
     }
+    cout<<source<<endl;
+    g.bfs(source,n);
     /*for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
