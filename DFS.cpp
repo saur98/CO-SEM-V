@@ -64,18 +64,17 @@ class stack
 int main()
 {
     cout<<"Enter number of nodes"<<endl;
-    int n=4,k,c=1,i,j,source=0;
-    //cin>>n;
+    int n=0,k,c=1,i,j,source=0;
+    cin>>n;
     stack g(n);
-    g.edge(0, 1);
+    /*g.edge(0, 1);
     g.edge(0, 2);
     g.edge(1, 2);
-    g.edge(2, 3);
-    //cin>>source;
+    g.edge(2, 3);*/
+    cout<<"enter source node"<<endl;
+    cin>>source;
     cout<<source<<endl;
-    g.spush(n);
-    g.dfs(source,n);
-    /*while(c!=0)
+    while(c!=0)
     {
         int a,b;
         cout<<"enter adjacent nodes"<<endl;
@@ -83,7 +82,9 @@ int main()
         g.edge(a,b);
         cout<<"STOP ?(press 0 to stop/press 1 to continue)"<<endl;
         cin>>c;
-    }*/
+    }
+    g.spush(n);
+    g.dfs(source,n);
     /*for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
