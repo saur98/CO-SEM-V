@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 using namespace std;
 
 class stack
@@ -16,7 +17,7 @@ class stack
                 ab[i][j]=0;
         st=new int[n];
         visited=new int[n];
-        for(int i=0;i<n;i++)visited[n]=0;
+        for(int i=0;i<n;i++)visited[i]=0;
         top=-1;
     }
     void spush(int n)
@@ -42,6 +43,7 @@ class stack
         return ;
         for(i=0;i<k;i++)
         {
+
             if(ab[n][i]==1)
             {
                 if(visited[i]==0)
@@ -67,12 +69,14 @@ int main()
     int n=0,k,c=1,i,j,source=0;
     cin>>n;
     stack g(n);
-    /*g.edge(0, 1);
-    g.edge(0, 2);
-    g.edge(1, 2);
-    g.edge(2, 3);*/
     cout<<"enter source node"<<endl;
     cin>>source;
+    /*g.edge(0,1);
+    g.edge(2,1);
+    g.edge(4,1);
+    g.edge(2,3);
+    g.edge(0,3);
+    g.edge(4,3);*/
     while(c!=0)
     {
         int a,b;
@@ -82,7 +86,7 @@ int main()
         cout<<"STOP ?(press 0 to stop/press 1 to continue)"<<endl;
         cin>>c;
     }
-    cout<<source<<endl;
+    cout<<endl<<source<<endl;
     g.spush(source);
     g.dfs(source,n);
     /*for(i=0;i<n;i++)
